@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3">
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>
+              Writers
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each}}
+          <tr id="writer"><td>{{#link-to 'wacomwriter' this}}{{id}}{{/link-to}}</td></tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-3">
+      {{outlet}}
+    </div>
+  </div>
+</div>
