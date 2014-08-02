@@ -1,3 +1,12 @@
-{{#each labels}}
-<li class="list-group-item"><span class="label label-success pull-right">{{this.repeat}}</span>{{this.label}}</li>
-{{/each}}
+<div class="row">
+  <div class="col-md-3">
+    {{#each labels}}
+      {{#link-to 'wacomlabel' this}}
+      <li class="list-group-item"><span class="label label-success pull-right">{{this.repeat}}</span>{{this.id}}</li>
+      {{/link-to}}
+    {{/each}}
+  </div>
+  <div class="col-md-9">
+    {{outlet}}
+  </div>
+</div>
