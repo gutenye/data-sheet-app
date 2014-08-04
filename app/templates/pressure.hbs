@@ -11,7 +11,13 @@
         </thead>
         <tbody>
           {{#each}}
-          <tr><td>{{#link-to 'pressurewriter' this}}{{id}}{{/link-to}}</td></tr>
+          <tr>
+            <td>
+              {{#link-to 'pressurewriter' this}}
+                    {{id}}
+              {{/link-to}}
+            </td>
+          </tr>
           {{/each}}
         </tbody>
       </table>

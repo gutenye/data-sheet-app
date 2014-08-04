@@ -3,7 +3,7 @@
 module.exports = function(environment) {
   var ENV = {
     environment: environment,
-    baseURL: 'data-sheet-app',
+    baseURL: '/',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
@@ -31,6 +31,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
+    ENV.baseURL = '/data-sheet-app/';
 
   }
 
