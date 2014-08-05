@@ -1,8 +1,6 @@
-import Wacom from 'data-sheet-app/models/wacom';
-
 var WacomlabelRoute = Ember.Route.extend({
   model: function (params) {
-    return Wacom.findBy('id', params.writer_id);
+    return this.modelFor('wacomwriter').labels.findBy('id', params.labels_id);
   }
 });
 
