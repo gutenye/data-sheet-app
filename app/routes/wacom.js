@@ -4,6 +4,7 @@ import Wacom from 'data-sheet-app/models/wacom';
 
 var WacomRoute = Ember.Route.extend({
   model: function () {
+    //return this.store.all('wacom');
     return Wacom;
   }
 });
