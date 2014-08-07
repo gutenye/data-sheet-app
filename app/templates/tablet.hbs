@@ -1,20 +1,20 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-3">
-      <table class="table table-bordered table-hover">
-        <thead>
-          <tr>
-            <th>
-              Writers
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {{#each}}
-          <tr><td>{{#link-to 'tabletwriter' this}}{{id}}{{/link-to}}</td></tr>
-          {{/each}}
-        </tbody>
-      </table>
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title" align="center">Writers</h3>
+        </div>
+        <div class="panel-body">
+          <table class="table table-bordered table-hover">
+            <tbody>
+              {{#each}}
+              <tr id="writer"><td>{{#link-to 'tabletwriter' this}}{{id}}{{/link-to}}</td></tr>
+              {{/each}}
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
     <div class="col-md-9">
       {{outlet}}

@@ -1,10 +1,41 @@
 <div class="row">
   <div class="col-md-3">
-    {{#each labels}}
-      {{#link-to 'tabletlabel' this}}
-      <li class="list-group-item"><span class="label label-success pull-right">{{this.repeat}}</span>{{this.id}}</li>
-      {{/link-to}}
-    {{/each}}
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h3 class="panel-title" align="center">Labels
+        <span class="pull-right">
+          <button type="button" class="btn btn-info btn-xs" {{action 'sort'}}>
+            sort
+          </button>
+        </span>
+        </h3>
+      </div>
+      <div class="panel-body">
+        {{#if 'isSorted'}}
+          {{#each sortedContent}}
+            {{#link-to 'tabletlabel' this}}
+              <li class="list-group-item">
+                {{id}}
+                <span class="label label-success pull-right">
+                  {{repeat}}
+                </span>
+              </li>
+            {{/link-to}}
+          {{/each}}
+        {{else}}
+          {{#each labels}}
+            {{#link-to 'tabletlabel' this}}
+              <li class="list-group-item">
+                {{id}}
+                <span class="label label-success pull-right">
+                  {{repeat}}
+                </span>
+              </li>
+            {{/link-to}}
+          {{/each}}
+        {{/if}}
+      </div>
+    </div>
   </div>
   <div class="col-md-9">
     {{outlet}}
